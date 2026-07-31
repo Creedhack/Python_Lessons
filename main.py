@@ -1,9 +1,6 @@
-student_name = input("Атыңызды енгізіңіз: ") 
-college_name = input("Колледждің атын енгізіңіз: ") 
-hobby = input("Хоббиіңізді енгізіңіз: ") 
+birth_year = input("Туған жылыңызды енгізіңіз: ")
+current_year = 2026
+age = current_year - int(birth_year)
 
-print("\n--- СТУДЕНТТІҢ ВИЗИТКАСЫ ---")
-print(f"Аты: {student_name}")
-print(f"оқу орны: {college_name}")
-print(f"Хоббиі: {hobby}")
-print("----------------------------")
+print("\n--- Есептеу нәтижесі ---")
+print(f"Сіздің жасыңыз шамамен: {age}-де!")
