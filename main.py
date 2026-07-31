@@ -1,6 +1,10 @@
-birth_year = input("Туған жылыңызды енгізіңіз: ")
-current_year = 2026
-age = current_year - int(birth_year)
-
-print("\n--- Есептеу нәтижесі ---")
-print(f"Сіздің жасыңыз шамамен: {age}-де!")
+product_name = input("Тауардың атын енгізіңіз: ") 
+price = input("Тауардың бағасын енгізіңіз(тг): ")
+quantity = input("Қанша дана (штук) аласыз: ")
+total_price = int(price) * int(quantity)
+print("\n========== СУПЕРМАРКЕТ ЧЕГІ ========== ")
+print(f"Тауар аты: {product_name}")
+print(f"Бағасы: {price} тг")
+print(f"Саны: {quantity} шт")
+print(f"Жалпы құны: {total_price} тг")
+print("================================")
