@@ -1,12 +1,14 @@
-import random 
-secret_number = random.randint(1, 10) 
-guess = 0  
-print("=== ШЕКСІЗ САНДЫ ТАП ОЙЫНЫ ===")
-while guess != secret_number:
-    guess = int(input("1 мен 10 аралығындағы санды болжаңыз: "))
-    if guess < secret_number:
-        print("Кіші сан. Тағы бір рет көріңіз.")
-    elif guess > secret_number:
-        print("Үлкен сан. Тағы бір рет көріңіз.")
+correct_password = "Python2026" 
+attempts = 3 
+print("=== ҚАУІПСІЗ КІРУ ЖҮЙЕСІ ===")
+while attempts > 0:
+    user_input = input("Құпия сөзді енгізіңіз: ")
+    if user_input == correct_password:
+        print("Құпия сөз дұрыс! Қош келдіңіз!")
+        break
     else:
-        print("УРА-А-А! Сіз құпия санды таптыңыз!")
+        attempts = attempts - 1
+        if attempts > 0:
+            print(f"ПАРОЛЬ ҚАТЕ! ТАҒЫ {attempts} МҮМКІНДІГІҢІЗ ҚАЛДЫ.\n")
+        else:
+            print("3 РЕТ ҚАТЕ ЕНГІЗДІҢІЗ! Қауіпсіздік жүйесі бұғатталды.")
