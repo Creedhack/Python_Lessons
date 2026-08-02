@@ -1,14 +1,25 @@
-correct_password = "Python2026" 
-attempts = 3 
-print("=== ҚАУІПСІЗ КІРУ ЖҮЙЕСІ ===")
-while attempts > 0:
-    user_input = input("Құпия сөзді енгізіңіз: ")
-    if user_input == correct_password:
-        print("Құпия сөз дұрыс! Қош келдіңіз!")
+hero_name = "Eminem" 
+hero_hp = 100 
+hero_damage = 25
+raper_name = "Slim Shady"
+raper_hp = 150
+raper_damage = 20
+print(f"=== ОЙЫН БАСТАЛДЫ ! ===\n")
+print(f"Eminem: {hero_name} (HP: {hero_hp}, Damage: {hero_damage})")
+print(f"Slim Shady: {raper_name} (HP: {raper_hp}, Damage: {raper_damage})\n")
+round = 1 
+while hero_hp > 0 and raper_hp > 0:
+    print(f"--- Раунд {round} ---")
+    raper_hp = raper_hp - hero_damage
+    print(f"{hero_name} ұрды ! {hero_damage} залал келтірді.")
+    print(f"{raper_name} Денсаулығы: {raper_hp}")
+    if raper_hp <= 0:
+        print(f"\n{raper_name} жеңілді ! {hero_name} жеңіске жетті !")
         break
-    else:
-        attempts = attempts - 1
-        if attempts > 0:
-            print(f"ПАРОЛЬ ҚАТЕ! ТАҒЫ {attempts} МҮМКІНДІГІҢІЗ ҚАЛДЫ.\n")
-        else:
-            print("3 РЕТ ҚАТЕ ЕНГІЗДІҢІЗ! Қауіпсіздік жүйесі бұғатталды.")
+    hero_hp = hero_hp - raper_damage
+    print(f"{raper_name} ұрды ! {raper_damage} залал келтірді.") 
+    print(f"{hero_name} Денсаулығы: {hero_hp}\n")
+    if hero_hp <= 0:
+        print(f"\n{hero_name} жеңілді ! {raper_name} жеңіске жетті !")
+    round = round + 1
+print(f"\n=== RAP BATTLE АЯҚТАЛДЫ ! ===") 
